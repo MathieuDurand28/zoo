@@ -1,40 +1,32 @@
 package com.azardhel.zoo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Zoo {
-    ArrayList<Animal> animal;
 
-    public Zoo()
-    {
-        animal = new ArrayList<>();
-    }
+    private List<Animal> animals = new ArrayList<>();
 
-    void addAnimal(Animal a)
-    {
-        animal.add(a);
-    }
-
-    void showAllAnimals()
-    {
-        for (Animal a : animal ) {
-            a.introduce();
-        }
-
-    }
-
-    void makeAllSound()
-    {
-        for (Animal a : animal) {
-            a.makeSound();
+    public void addAnimal(Animal animal) {
+        if (animal != null) {
+            animals.add(animal);
+        } else {
+            System.out.println("Erreur : animal nul non ajouté !");
         }
     }
 
-    void makeAllSwim()
-    {
-        for (Animal a : animal) {
-            if (a instanceof Swimmable) {
-                ((Swimmable)a).swim();
+    public void showAllAnimals() {
+        System.out.println("-- Liste des animaux --");
+        for (Animal animal : animals) {
+            animal.makeSound();
+        }
+    }
+
+    public void showSwimmers() {
+        System.out.println("-- Animaux nageurs --");
+        for (Animal animal : animals) {
+            if (animal instanceof Swimmable) {
+                ((Swimmable)animal).swim();
             }
         }
     }

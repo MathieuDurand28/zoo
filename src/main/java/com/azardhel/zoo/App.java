@@ -4,21 +4,18 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Bienvenue au Zoo ! \n" );
+        Zoo zoo = new Zoo();
 
-        Lion leo = new Lion("Léo", 25);
-        Monkey marco = new Monkey("Marco", 30);
-        Fish cindy = new Fish("Cindy", 50);
+        Lion simba = new Lion("Simba", 5);
+        Fish nemo = new Fish("Nemo", 2);
+        Monkey george = new Monkey("George", 3);
 
-        Zoo beauval = new Zoo();
+        zoo.addAnimal(simba);
+        zoo.addAnimal(nemo);
+        zoo.addAnimal(george);
 
-        beauval.addAnimal(leo);
-        beauval.addAnimal(marco);
-        beauval.addAnimal(cindy);
-
-        beauval.showAllAnimals();
-        beauval.makeAllSound();
-        beauval.makeAllSwim();
+        zoo.showAllAnimals();
+        zoo.showSwimmers();
 
     }
 }

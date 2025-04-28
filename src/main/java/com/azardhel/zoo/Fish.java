@@ -2,26 +2,17 @@ package com.azardhel.zoo;
 
 public class Fish extends Animal implements Swimmable {
 
-    public Fish(String name, Integer age) {
-            super(name, age);
-        }
-    
-    @Override
-    public void introduce()
-    {
-        System.out.println("- Je suis un "+name+" de "+age+" ans! \n");
+    public Fish(String name, int age) {
+        super(name, age);
     }
 
     @Override
-    public void makeSound()
-    {
-        System.out.println("- Gloups ! ");
+    public void makeSound() {
+        System.out.println("Le poisson " + getName() + " fait des bulles...");
     }
 
     @Override
-    public void swim()
-    {
-        System.out.println("[Activité piscine]");
-        System.out.println("-> "+name+" nage dans l'eau !");
+    public void swim() {
+        System.out.println(getName() + " nage joyeusement !");
     }
 }

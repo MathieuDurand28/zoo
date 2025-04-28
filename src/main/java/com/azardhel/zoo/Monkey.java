@@ -2,19 +2,12 @@ package com.azardhel.zoo;
 
 public class Monkey extends Animal {
 
-    public Monkey(String name, Integer age) {
-            super(name, age);
-        }
-    
-    @Override
-    public void introduce()
-    {
-        System.out.println("- Je suis un "+name+" de "+age+" ans! \n");
+    public Monkey(String name, int age) {
+        super(name, age);
     }
 
     @Override
-    public void makeSound()
-    {
-        System.out.println("- Ouahhhhahahahahah ! ");
+    public void makeSound() {
+        System.out.println("Le singe " + getName() + " crie : Hou Hou !");
     }
 }
